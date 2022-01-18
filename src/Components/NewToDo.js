@@ -1,6 +1,6 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
-
+import SprintCard from './SprintCard'
 
 const NewToDo = (props) => {
   return (
@@ -14,6 +14,7 @@ const NewToDo = (props) => {
               show that equal height action.
             </Card.Text>
           </Card.Body>
+            <SprintCard/>
         </Card>
    
   )

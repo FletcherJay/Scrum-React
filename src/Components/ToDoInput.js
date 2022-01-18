@@ -2,15 +2,15 @@ import React from 'react'
 import { InputGroup, FormControl, Button } from 'react-bootstrap'
 
 const ToDoInput = () => {
-  const onClick = (e) => {
-    console.log(e)
+  const onClick = (props) => {
+    console.log(FormControl.value)
   }
 
   return (
     <div>
          <InputGroup className="mb-3">
     <FormControl
-      placeholder="To Do Task"
+      placeholder="New Sprints"
       aria-label="To Do Task"
       aria-describedby="basic-addon2"
     />
