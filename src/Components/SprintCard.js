@@ -1,13 +1,14 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
-const SprintCard = () => {
+const SprintCard = ({task}) => {
+  
   return (
     <div>
         <Card>
           <Card.Body>
            
             <Card.Text>
-              able to add new sprints through input
+              {task.text}
             </Card.Text>
           </Card.Body>
         </Card>

@@ -1,20 +1,23 @@
-import React from 'react'
+import { React} from 'react'
 import { Card } from 'react-bootstrap'
 import SprintCard from './SprintCard'
 
-const NewToDo = (props) => {
+
+const NewToDo = ({tasks, title}) => {
+  
   return (
     
       <Card>
           <Card.Body>
-            <Card.Title>{props.title}</Card.Title>
-            <Card.Text>
-              This is a wider card with supporting text below as a natural lead-in to
-              additional content. This card has even longer content than the first to
-              show that equal height action.
+            <Card.Title>{title}</Card.Title>
+            <Card.Text> 
+              <>
+                {tasks.map((task) => (
+                  <SprintCard key={task.id} task={task}/>
+                ))}
+              </>
             </Card.Text>
           </Card.Body>
-            <SprintCard/>
         </Card>
    
   )
