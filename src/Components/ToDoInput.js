@@ -1,11 +1,10 @@
-import { React, useState} from 'react'
+import { useState} from 'react'
 import { InputGroup, FormControl, Button } from 'react-bootstrap'
-import SprintCard from './SprintCard'
 
-const ToDoInput = (onAdd) => {
+const ToDoInput = ({onAdd}) => {
   const [text, setText] = useState('')
 
-  const onSubmit = (e) => {
+  const onClick = (e) => {
     e.preventDefault()
 
     if (!text){
@@ -13,7 +12,7 @@ const ToDoInput = (onAdd) => {
       return
     }
      
-      onAdd({text}) 
+      onAdd({ text }) 
 
       setText('')
   }
@@ -28,7 +27,7 @@ const ToDoInput = (onAdd) => {
       value={text}
       onChange={(e) => setText(e.target.value)}
     />
-    <Button onSubmit={onSubmit} variant="outline-secondary" id="button-addon2">
+    <Button onClick={onClick} variant="outline-secondary" id="button-addon2">
       Add
     </Button>
   </InputGroup>

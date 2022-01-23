@@ -6,10 +6,10 @@ const CardToDo = (props) => {
 
       <CardGroup>
         <NewToDo tasks={props.tasks} title='Backlog' />
-        <NewToDo title='to do'/>
-        <NewToDo title='doing'/>
-        <NewToDo title='review'/>
-        <NewToDo title='finished'/>
+        <NewToDo tasks={props.tasks} title='to do'/>
+        <NewToDo tasks={props.tasks} title='doing'/>
+        <NewToDo tasks={props.tasks} title='review'/>
+        <NewToDo tasks={props.tasks} title='finished'/>
       </CardGroup>
   
   )

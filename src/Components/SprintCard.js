@@ -1,6 +1,6 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
-const SprintCard = ({task}) => {
+const SprintCard = ({key, task}) => {
   
   return (
     <div>
