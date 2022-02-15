@@ -2,17 +2,19 @@ import { Card } from 'react-bootstrap'
 import SprintCard from './SprintCard'
 
 
-const NewToDo = ({tasks, title}) => {
+const NewToDo = ({tasks: {id, text,title},
+   titles, tasks}) => {
   
   return (
     
       <Card>
           <Card.Body>
-            <Card.Title>{title}</Card.Title>
+            <Card.Title>{titles}</Card.Title>
             <Card.Text> 
-                {title==='to do' ? (tasks.map((task) => (
-                  <SprintCard key={task.id} task={task}/>
-                ))) : null}
+            {console.log(tasks)}
+                {titles==='to do' ? (tasks.map((task) => (
+                  <SprintCard key={id} task={text} title={title} />
+                ))) : ''}
 
             </Card.Text>
           </Card.Body>

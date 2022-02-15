@@ -5,12 +5,13 @@ const CardToDo = (props) => {
   return (
 
       <CardGroup>
-        <NewToDo tasks={props.tasks} title='Backlog' />
-        <NewToDo tasks={props.tasks} title='to do'/>
-        <NewToDo tasks={props.tasks} title='doing'/>
-        <NewToDo tasks={props.tasks} title='review'/>
-        <NewToDo tasks={props.tasks} title='finished'/>
-      </CardGroup>
+        <NewToDo  tasks={props.tasks} titles='Backlog' />
+        <NewToDo tasks={props.tasks} titles='to do'/>
+        <NewToDo tasks={props.tasks} titles='doing'/>
+        <NewToDo tasks={props.tasks} titles='review'/>
+        <NewToDo  tasks={props.tasks} titles='finished'/>
+        
+      </CardGroup> 
   
   )
 }

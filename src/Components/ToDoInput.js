@@ -3,16 +3,19 @@ import { InputGroup, FormControl, Button } from 'react-bootstrap'
 
 const ToDoInput = ({onAdd}) => {
   const [text, setText] = useState('')
+  const [title, setTitle] = useState('to do')
 
   const onClick = (e) => {
     e.preventDefault()
+    
 
     if (!text){
       alert('Please add task')
       return
     }
-     
-      onAdd({ text }) 
+      
+      onAdd({ text, title })
+      
 
       setText('')
   }
