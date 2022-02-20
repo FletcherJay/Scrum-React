@@ -7,9 +7,9 @@ const SprintCard = ({key, task, title}) => {
    
         <Card>
           <Card.Body>
-           
+           {console.log(title)} 
             <Card.Text>
-              {task.text}
+              {task}
             </Card.Text>
           </Card.Body>
         </Card>

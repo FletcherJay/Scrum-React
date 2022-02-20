@@ -16,7 +16,7 @@ const ToDoInput = ({onAdd}) => {
       
       onAdd({ text, title })
       
-
+      
       setText('')
   }
 

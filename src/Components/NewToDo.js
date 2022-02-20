@@ -1,3 +1,4 @@
+import React from 'react'
 import { Card } from 'react-bootstrap'
 import SprintCard from './SprintCard'
 
@@ -10,13 +11,14 @@ const NewToDo = ({tasks: {id, text,title},
       <Card>
           <Card.Body>
             <Card.Title>{titles}</Card.Title>
-            <Card.Text> 
-            {console.log(tasks)}
-                {titles==='to do' ? (tasks.map((task) => (
-                  <SprintCard key={id} task={text} title={title} />
+            
+          
+                {tasks===tasks ? (tasks.map((task) => (
+                  task.title===titles ? (
+                  <SprintCard key={task.id} task={task.text} title={task.title} />): '' 
                 ))) : ''}
 
-            </Card.Text>
+            
           </Card.Body>
         </Card>
    
