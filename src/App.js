@@ -2,18 +2,31 @@ import { React, useState} from 'react'
 import ToDoInput from './Components/ToDoInput';
 import NavBar from './Components/NavBar'
 import CardToDo from './Components/CardToDo';
+import { DragDropContext } from 'react-beautiful-dnd'
+
 const App = () => {
+  
   const [tasks, setTasks] = useState([
-  //   {id: 1,
-  //   text: 'newToaDo',
-  // title: 'Backlog'}
+     {id: 1,
+     text: 'Backlog to do',
+   title: 'Backlog'},
+   {id: 2,
+    text: 'new To Do',
+  title: 'To Do'},
+  {id: 3,
+    text: 'lower to do',
+  title: 'To Do'},
+  {id: 4,
+    text: 'finished to do',
+  title: 'Finished'}
    ])
-  const [titles, setTitles ] = useState('')
-//i want to make it so when i create  a new to do
-//that to do will have a title of to do, and when i drag
-//it that title will change based on where i drop that to do
-// but i also what to filter out any titles that are not also the title
-//to specific cards such as backlog and finished
+
+   const [titles, setTitles ] = useState('') 
+      
+  
+  
+  
+
 
   const addTask = (task) => {
     const id = Math.floor(Math.random() * 10000) + 1
@@ -23,12 +36,15 @@ const App = () => {
     setTitles([...titles ])
   }
   return (
-    <div>
-      <NavBar />
-      <ToDoInput onAdd={addTask} />
-      <CardToDo tasks={tasks} titles={titles}/>
-      
-    </div>
+   
+      <div>
+        <NavBar />
+        <ToDoInput onAdd={addTask} />
+        
+          <CardToDo tasks={tasks} />
+        
+      </div>
+    
   );
 }
 

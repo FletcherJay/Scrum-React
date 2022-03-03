@@ -3,7 +3,7 @@ import { InputGroup, FormControl, Button } from 'react-bootstrap'
 
 const ToDoInput = ({onAdd}) => {
   const [text, setText] = useState('')
-  const [title, setTitle] = useState('to do')
+  const [title, setTitle] = useState('To Do')
 
   const onClick = (e) => {
     e.preventDefault()
