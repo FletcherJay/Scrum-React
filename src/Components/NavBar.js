@@ -11,25 +11,25 @@ function NavBarDropdown() {
       <Nav variant="pills" activeKey="1" onSelect={handleSelect}>
         <Nav.Item>
           <Nav.Link eventKey="1" href="#/home">
-            NavLink 1 content
+            My Blog
           </Nav.Link>
         </Nav.Item>
         <Nav.Item>
           <Nav.Link eventKey="2" title="Item">
-            NavLink 2 content
+            My Projects
           </Nav.Link>
         </Nav.Item>
         <Nav.Item>
           <Nav.Link eventKey="3" disabled>
-            NavLink 3 content
+            Contact
           </Nav.Link>
         </Nav.Item>
         <NavDropdown title="Dropdown" id="nav-dropdown">
-          <NavDropdown.Item eventKey="4.1">Action</NavDropdown.Item>
-          <NavDropdown.Item eventKey="4.2">Another action</NavDropdown.Item>
-          <NavDropdown.Item eventKey="4.3">Something else here</NavDropdown.Item>
+          <NavDropdown.Item eventKey="4.1">Github</NavDropdown.Item>
+          <NavDropdown.Item eventKey="4.2">Indeed</NavDropdown.Item>
+          <NavDropdown.Item eventKey="4.3">Instagram</NavDropdown.Item>
           <NavDropdown.Divider />
-          <NavDropdown.Item eventKey="4.4">Separated link</NavDropdown.Item>
+          <NavDropdown.Item eventKey="4.4">Facebook</NavDropdown.Item>
         </NavDropdown>
       </Nav>
     </div>
