@@ -1,6 +1,9 @@
 import React from 'react'
 import { Draggable } from 'react-beautiful-dnd'
-import { Card, Container, NavItem } from 'react-bootstrap'
+import { Card, Container, Button, ButtonGroup } from 'react-bootstrap'
+import {FaEdit} from 'react-icons/fa'
+import { MdDeleteForever } from "react-icons/md";
+
 
 const SprintCard = ({key, task, title, index, id}) => {
  
@@ -13,13 +16,18 @@ const SprintCard = ({key, task, title, index, id}) => {
             ref={provided.innerRef}
       >
         <div>
+        <ButtonGroup>
             <Card>
               <Card.Body>
                 <Card.Text>
-                  {task}
+                  {task} <Button size="sm" variant="outline-dark" ><MdDeleteForever/></Button>
+
                 </Card.Text>
+                
               </Card.Body>
             </Card>
+ 
+            </ButtonGroup>
         </div>
       </Container>
       )}

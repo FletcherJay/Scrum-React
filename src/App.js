@@ -1,4 +1,4 @@
-import { React, useState} from 'react'
+import { React, useState, useEffect} from 'react'
 import ToDoInput from './Components/ToDoInput';
 import NavBar from './Components/NavBar'
 import CardToDo from './Components/CardToDo';
@@ -11,7 +11,17 @@ const App = () => {
    ])
 
    const [titles, setTitles ] = useState('') 
-      
+
+   useEffect(() => {
+     const data = localStorage.getItem("my-tasks");
+     if (data) {
+      setTasks(JSON.parse(data))
+     }
+   }, []) 
+
+  useEffect(() => {
+    localStorage.setItem("my-tasks",JSON.stringify(tasks));
+  });
   
   const addTask = (task) => {
     const id = Math.floor(Math.random() * 10000) + 1
