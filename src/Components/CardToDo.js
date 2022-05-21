@@ -26,16 +26,15 @@ const CardToDo = (props) => {
     ]);
  // const[tasks, setTasks] = useState('')
 //change title of tasks from source to destination on drop
-  
-  return (
 
+  return (
       <CardGroup>
        
-            <NewToDo  tasks={props.tasks} titles={titles[0]} />
-            <NewToDo tasks={props.tasks} titles={titles[1]}/>
-            <NewToDo tasks={props.tasks} titles={titles[2]}/>
-            <NewToDo tasks={props.tasks} titles={titles[3]}/>
-            <NewToDo  tasks={props.tasks} titles={titles[4]}/>
+            <NewToDo onDelete={props.onDelete} tasks={props.tasks} titles={titles[0]}/>
+            <NewToDo onDelete={props.onDelete} tasks={props.tasks} titles={titles[1]}/>
+            <NewToDo onDelete={props.onDelete} tasks={props.tasks} titles={titles[2]}/>
+            <NewToDo onDelete={props.onDelete} tasks={props.tasks} titles={titles[3]}/>
+            <NewToDo onDelete={props.onDelete} tasks={props.tasks} titles={titles[4]}/>
             
       </CardGroup> 
   

@@ -23,7 +23,7 @@ const NewToDo = (props) => {
                   >
                     {props.tasks.map((task,index) => (
                     task.title===props.titles.name ? (
-                    <SprintCard id={task.id}  task={task.text} title={task.title} index={index} />): '' 
+                    <SprintCard  onDelete={props.onDelete} id={task.id}  task={task.text} title={task.title} index={index} props={task} />): '' 
                     ))
                     }
                     {provided.placeholder}

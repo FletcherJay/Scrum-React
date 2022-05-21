@@ -51,7 +51,9 @@ const App = () => {
     );
    
   };
-
+  const onDelete = (tasks) => {
+    setTasks((tasks) => tasks.filter((tasks) => tasks.id !== tasks.id))
+  }
   return (
    
       <div>
@@ -61,7 +63,7 @@ const App = () => {
         <DragDropContext
         onDragEnd={handleOnDragEnd}
         >
-          <CardToDo tasks={tasks} />
+          <CardToDo onDelete={setTasks} tasks={tasks} />
           </DragDropContext>
       </div>
     
